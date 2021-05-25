@@ -1,6 +1,6 @@
 from airflow import DAG
 from airflow.operators.docker_operator import DockerOperator
-from datetime import timedelta
+from datetime import datetime, timedelta
 
 
 default_args = {
@@ -30,7 +30,7 @@ with DAG(
     default_args=default_args,
     description='Pull down and process congressional record for the day',
     schedule_interval='0 23 * * *',
-    start_date=days_ago(2),
+    start_date=datetime.today() - timedelta(days = 2),
     tags=['crec'],
 ) as dag:
 
