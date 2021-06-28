@@ -26,7 +26,7 @@ default_args = {
 }
 
 with DAG(
-    'tutorial',
+    'download_crec',
     default_args=default_args,
     description='Pull down and process congressional record for the day',
     schedule_interval='0 23 * * *',
