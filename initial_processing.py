@@ -39,7 +39,8 @@ with DAG(
         task_id='transfer_to_s3_task',
         image='jtchow/transfer_to_s3:latest',
         auto_remove=True,
-        docker_url='unix://var/run/docker.sock'
+        docker_url='unix://var/run/docker.sock',
+        force_pull=True
     )
 
     transfer_to_s3_task
