@@ -29,7 +29,7 @@ with DAG(
     'download_crec',
     default_args=default_args,
     description='Pull down and process congressional record for the day',
-    schedule_interval='0 23 * * *',
+    schedule_interval='0 8 * * *',
     start_date=datetime.today() - timedelta(days = 2),
     tags=['crec'],
 ) as dag:
