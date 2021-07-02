@@ -37,7 +37,7 @@ with DAG(
     transfer_to_s3_task = DockerOperator(
         dag=dag,
         task_id='transfer_to_s3_task',
-        image='jtchow/transfer_to_s3',
+        image='jtchow/transfer_to_s3:latest',
         auto_remove=True,
         docker_url='unix://var/run/docker.sock'
     )
